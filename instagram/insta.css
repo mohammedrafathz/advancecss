@@ -16,6 +16,7 @@ body {
 
 .input-text {
   height: 25px;
+  display: none;
 }
 
 header {
@@ -42,8 +43,8 @@ main {
 }
 .avatar {
   border-radius: 50%;
-  width: 152px;
-  height: 152px;
+  width: 70px;
+  height: 70px;
   justify-self: center;
 }
 
@@ -60,9 +61,49 @@ main {
 .user-info {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(3, auto);
 }
 
+.user-info h1 {
+  margin: 0%;
+}
+
+.para {
+  grid-column: 1 / -1;
+}
+
+.user-stats {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  display: flex;
+  justify-content: space-around;
+}
 .feed-nav {
   display: flex;
   justify-content: center;
+}
+
+.feed-nav > a {
+  display: block;
+  padding: 10px;
+}
+
+.news-feed {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-column: 28px; */
+}
+
+.news-feed > img {
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .input-text {
+    display: block;
+  }
+
+  .avatar {
+    width: 152px;
+  }
 }
