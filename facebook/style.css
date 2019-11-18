@@ -1,0 +1,121 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #dddddd;
+  color: #ffffff;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+  --header: 40px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: var(--header);
+  padding: 0 5%;
+  background: blue;
+  color: white;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-nav > ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.main-nav > ul > li {
+  padding: 10px;
+  display: inline-block;
+}
+
+main {
+  margin: var(--header) 0 0;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 180px 500px 300px;
+  column-gap: 12px;
+  grid-template-areas: "nav feed services";
+  height: calc(100vh - var(--header));
+}
+
+@media (min-width: 1200px) {
+  main {
+    padding-right: 200px;
+  }
+}
+.side-nav {
+  grid-area: nav;
+}
+.news-feed {
+  grid-area: feed;
+  height: calc(100vh - var(--header));
+  overflow-y: scroll;
+}
+.services {
+  grid-area: services;
+}
+.post {
+  background: white;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.post__engage {
+  padding: 10px 0;
+}
+
+.post__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  color: black;
+}
+.post__info a {
+  margin-left: 10px;
+  display: block;
+}
+.post__info span {
+  margin-left: 10px;
+  display: block;
+}
+
+.post__content img {
+  width: 100%;
+}
+
+.comment {
+  background: #eeeeee;
+  border-top: solid 1px #ccc;
+  margin: 0 -10px -10px;
+  padding: 10px;
+  display: flex;
+}
+
+.comment input {
+  width: 100%;
+  margin-left: 10px;
+  border-radius: 20px;
+  border: solid 1px #ccc;
+  padding: 10px 20px;
+}
