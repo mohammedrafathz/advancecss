@@ -1,0 +1,28 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #111111;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.col {
+  background: #333;
+}
+
+.tweet {
+  padding: 10px;
+  border-bottom: solid 1px #444;
+}
+
+ .tweet img{
+     border-radius: 50%;
+ }
